@@ -21,6 +21,22 @@ npm run build:pages
 
 touch out/.nojekyll
 
+# Sofort-Weiterleitung / → /v2/ (wie lokal localhost:3000/v2)
+cat > out/index.html <<EOF
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=${BASE_PATH}/v2/" />
+  <script>location.replace("${BASE_PATH}/v2/");</script>
+  <title>The WebDudes · Weiterleitung</title>
+</head>
+<body>
+  <p><a href="${BASE_PATH}/v2/">Zur v2-Vorschau</a></p>
+</body>
+</html>
+EOF
+
 echo "[pages] Push nach gh-pages …"
 (
   cd out
@@ -35,4 +51,4 @@ echo "[pages] Push nach gh-pages …"
   git push -f origin gh-pages
 )
 
-echo "[pages] Live: https://${REPO%%/*}.github.io${BASE_PATH}/"
+echo "[pages] Live: https://${REPO%%/*}.github.io${BASE_PATH}/v2/"

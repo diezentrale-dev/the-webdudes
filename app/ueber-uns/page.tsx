@@ -16,7 +16,7 @@ export default function UeberUnsPage() {
         <p>
           Ketten und Plattformen sind laut. Der Friseur mit der ruhigen Hand, der Koch vom Markt, der
           Handwerker, der am Telefon ehrlich sagt, wann er Zeit hat: Oft seid ihr leiser online, als
-          ihr’s verdient. Wir wollen, dass euer Betrieb im Netz genauso rüberkommt wie im Laden: klar,
+          ihr&apos;s verdient. Wir wollen, dass euer Betrieb im Netz genauso rüberkommt wie im Laden: klar,
           mit Gesicht, ohne Glanzfolie.
         </p>
         <p className="mt-4">{CORE_NARRATIVE}</p>

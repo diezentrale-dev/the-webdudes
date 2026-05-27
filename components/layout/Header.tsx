@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { BOOKING, NAV_LINKS, SITE } from "@/lib/config";
-import { v2Href, isV2PreviewMode } from "@/lib/v2-routes";
+import { v2Href } from "@/lib/v2-routes";
 import { cn } from "@/lib/cn";
 import { springGentle } from "@/lib/motion-presets";
 
@@ -71,8 +71,8 @@ export function Header() {
           {NAV_LINKS.map((link) => {
             const href = v2Href(pathname, link.href);
             const active =
-              link.href === "/" && isV2PreviewMode()
-                ? pathname === "/" || pathname === "/v2"
+              link.href === "/"
+                ? pathname === "/v2" || pathname === "/v2/"
                 : pathname === href;
             return (
               <Fragment key={link.href}>
@@ -127,8 +127,8 @@ export function Header() {
               {NAV_LINKS.map((link, i) => {
                 const href = v2Href(pathname, link.href);
                 const active =
-                  link.href === "/" && isV2PreviewMode()
-                    ? pathname === "/" || pathname === "/v2"
+                  link.href === "/"
+                    ? pathname === "/v2" || pathname === "/v2/"
                     : pathname === href;
                 return (
                 <motion.div

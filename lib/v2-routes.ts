@@ -1,4 +1,4 @@
-/** GitHub Pages-Vorschau: nur Copy v2, nicht die alte Startseite */
+/** GitHub Pages: nur die /v2-Vorschau wie lokal, nicht die alte Site */
 
 export function isV2PreviewMode(): boolean {
   return process.env.NEXT_PUBLIC_V2_ONLY === "true";
@@ -9,13 +9,13 @@ export function isV2Path(pathname: string): boolean {
   return pathname === "/v2" || pathname.startsWith("/v2/");
 }
 
-export function v2Href(pathname: string, href: string): string {
-  if (!isV2Path(pathname)) return href;
+export function v2Href(_pathname: string, href: string): string {
+  if (!isV2Path(_pathname)) return href;
   if (href.startsWith("/v2")) return href;
 
   switch (href) {
     case "/":
-      return isV2PreviewMode() ? "/" : "/v2";
+      return "/v2";
     case "/leistungen":
       return "/v2/leistungen";
     case "/ueber-uns":
@@ -29,7 +29,6 @@ export function v2Href(pathname: string, href: string): string {
   }
 }
 
-/** Feste v2-Links für Komponenten, die nur auf v2-Seiten leben */
 export const V2_LINKS = {
   home: "/v2",
   leistungen: "/v2/leistungen",
