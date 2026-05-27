@@ -1,6 +1,11 @@
-/** v2-Vorschau: alle internen Links bleiben unter /v2 */
+/** GitHub Pages-Vorschau: nur Copy v2, nicht die alte Startseite */
+
+export function isV2PreviewMode(): boolean {
+  return process.env.NEXT_PUBLIC_V2_ONLY === "true";
+}
 
 export function isV2Path(pathname: string): boolean {
+  if (isV2PreviewMode()) return true;
   return pathname === "/v2" || pathname.startsWith("/v2/");
 }
 
@@ -10,7 +15,7 @@ export function v2Href(pathname: string, href: string): string {
 
   switch (href) {
     case "/":
-      return "/v2";
+      return isV2PreviewMode() ? "/" : "/v2";
     case "/leistungen":
       return "/v2/leistungen";
     case "/ueber-uns":

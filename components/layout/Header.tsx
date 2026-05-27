@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { BOOKING, NAV_LINKS, SITE } from "@/lib/config";
-import { v2Href } from "@/lib/v2-routes";
+import { v2Href, isV2PreviewMode } from "@/lib/v2-routes";
 import { cn } from "@/lib/cn";
 import { springGentle } from "@/lib/motion-presets";
 
@@ -70,7 +70,10 @@ export function Header() {
         <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
           {NAV_LINKS.map((link) => {
             const href = v2Href(pathname, link.href);
-            const active = pathname === href;
+            const active =
+              link.href === "/" && isV2PreviewMode()
+                ? pathname === "/" || pathname === "/v2"
+                : pathname === href;
             return (
               <Fragment key={link.href}>
                 <Link
@@ -123,6 +126,10 @@ export function Header() {
             <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
               {NAV_LINKS.map((link, i) => {
                 const href = v2Href(pathname, link.href);
+                const active =
+                  link.href === "/" && isV2PreviewMode()
+                    ? pathname === "/" || pathname === "/v2"
+                    : pathname === href;
                 return (
                 <motion.div
                   key={link.href}
@@ -134,7 +141,7 @@ export function Header() {
                     href={href}
                     className={cn(
                       "block px-4 py-3.5 text-base font-medium transition-colors",
-                    pathname === href
+                    active
                       ? "rounded-[var(--radius-sm)] bg-[var(--bg-white)] text-[var(--ink)]"
                       : "rounded-[var(--radius-sm)] text-[var(--ink-soft)] hover:text-[var(--ink)]"
                     )}

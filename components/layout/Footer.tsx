@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BOOKING, NAV_LINKS, SITE } from "@/lib/config";
-import { v2Href } from "@/lib/v2-routes";
+import { v2Href, isV2PreviewMode } from "@/lib/v2-routes";
 import { LEGAL, phoneTelHref } from "@/lib/legal-config";
 import { RevealBlock } from "@/components/effects/RevealBlock";
 
 export function Footer() {
   const pathname = usePathname();
-  const tagline = pathname.startsWith("/v2")
+  const tagline = isV2PreviewMode() || pathname.startsWith("/v2")
     ? "Betreuung ab 20 €/Monat. Demo kostenlos im Meet. Kein Kauderwelsch, kein Druck."
     : "Demo-Webseite kostenlos – Projekt ab 99 €. Kein Kauderwelsch, kein Druck.";
 
