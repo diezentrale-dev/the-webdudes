@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The WebDudes · Schnellvorschau</title>
+  <style>
+    :root {
+      --cream: #fffdf9;
+      --ink: #1c1b1a;
+      --muted: #3d3c3a;
+      --accent: #c45c2a;
+      --ocean: #1e3a5f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(1200px circle at 10% -10%, rgba(255, 232, 208, 0.55), transparent 55%),
+        radial-gradient(900px circle at 90% 0%, rgba(255, 245, 230, 0.4), transparent 50%),
+        var(--cream);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: "Space Grotesk", Inter, sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      max-width: 22ch;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+    p {
+      max-width: 36rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hint {
+      font-size: 0.875rem;
+      color: var(--muted);
+      opacity: 0.85;
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(28, 27, 26, 0.08);
+      max-width: 28rem;
+    }
+    code {
+      font-size: 0.8em;
+      background: rgba(30, 58, 95, 0.08);
+      padding: 0.15em 0.4em;
+      border-radius: 0.35em;
+    }
+  </style>
+</head>
+<body>
+  <span class="badge">The WebDudes · Offline-Vorschau</span>
+  <h1>So sieht die Richtung aus – die volle Seite läuft mit Next.js.</h1>
+  <p>
+    Diese Datei ist eine <strong>einzige HTML-Seite</strong> ohne Server. Die richtige Firmen-Webseite mit allen Animationen startest du im Projektordner mit
+    <code>npm install</code> und <code>npm run dev</code>.
+  </p>
+  <p class="hint">
+    Ordner: <code>Documents/theis-web</code> · Danach im Browser: <code>http://localhost:3000</code>
+  </p>
+</body>
+</html>

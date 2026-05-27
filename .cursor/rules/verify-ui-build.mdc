@@ -1,0 +1,16 @@
+---
+description: Dev-Server-Zyklus, Tests und Build-Check vor Lieferung (theis-web)
+globs: "**/*.{tsx,ts,css}"
+alwaysApply: false
+---
+
+Nach Änderungen an `app/`, `components/`, `lib/`, `app/globals.css`, `tailwind.config.ts`, `postcss.config.*` oder `next.config.*`:
+
+## Vor dem Antworten an den Nutzer
+
+1. **Dev-Server neu starten:** Prozess auf Port 3000 beenden, dann **`npm run dev`** (nicht rohes `next dev` ohne Clean). Das Skript leert `.next` und startet den Dev-Server mit **Turbopack** (`--turbo`), um typische Webpack-Dev-Fehler zu vermeiden (**`__webpack_modules__[moduleId] is not a function`**, fehlende `./611.js`-Chunks, zerschossenes CSS nach HMR).
+2. **Nach jeder Anpassung prüfen:** `npm run verify` **oder** mindestens `npm run clean && npm run build` ohne Fehler; bei lokalem Test zusätzlich **`GET /`** und **`GET /portfolio`** = **HTTP 200**. Bei Abweichung: `npm run clean`, neu starten, erneut prüfen.
+3. **UI/CSS:** Wenn Layout, Styles oder Modale offensichtlich falsch wirken, zuerst beheben, dann erst Ergebnis melden.
+4. **Build-Sicherheit (größere Änderungen):** `npm run verify` (clean + `next build` + `next lint`) ohne Fehler.
+
+Schneller Dev-Start ohne Clean nur bei Bedarf: `npm run dev:fast` (`NEXT_DEV_CLEAN=0`). Bei Runtime-Fehlern im Browser: sofort **`npm run clean && npm run dev`**. **`npm run dev:only`** leert ebenfalls `.next`, hat aber keinen Port-Check – bevorzugt **`npm run dev`**.

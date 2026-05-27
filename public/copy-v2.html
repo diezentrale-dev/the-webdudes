@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The WebDudes — Copy v2 (Entwurf)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ede6da;
+      --bg-deep: #e2d9cb;
+      --bg-white: #f8f4ee;
+      --ink: #1a1714;
+      --ink-soft: #5c564e;
+      --rule: rgba(26,23,20,0.14);
+      --accent: #b8432f;
+      --accent-h: #9a3728;
+      --forest: #2a4d42;
+      --max: 76rem;
+      --header-h: 4.75rem;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.6; }
+
+    /* Banner */
+    .banner { background: var(--ink); color: var(--bg); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; padding: 0.6rem 1rem; position: sticky; top: 0; z-index: 100; }
+    .banner span { color: var(--accent); }
+
+    /* Nav */
+    nav { height: var(--header-h); border-bottom: 1px solid var(--rule); background: var(--bg); display: flex; align-items: center; padding: 0 2rem; justify-content: space-between; }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink); text-decoration: none; }
+    .nav-cta { background: var(--accent); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 0.55rem 1.25rem; border-radius: 2px; text-decoration: none; }
+
+    /* Wrapper */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Eyebrow */
+    .eyebrow { font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.32em; color: var(--forest); }
+
+    /* Sections */
+    section { padding: 6rem 0; }
+    section.dark { background: var(--ink); color: var(--bg); }
+    section.mid  { background: var(--bg-deep); }
+    section.white { background: var(--bg-white); }
+    section + section { border-top: 1px solid var(--rule); }
+    section.dark + * { border-top: none; }
+
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 5.5vw, 4.5rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.03em; }
+    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.75rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 600; }
+
+    .subline { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.65; max-width: 36rem; margin-top: 1.25rem; }
+    .body-text { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.7; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; font-size: 0.875rem; font-weight: 600; border-radius: 2px; text-decoration: none; cursor: pointer; min-height: 44px; transition: transform 0.2s, background 0.2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-red { background: var(--accent); color: #fff; }
+    .btn-red:hover { background: var(--accent-h); }
+    .btn-outline { border: 1px solid var(--ink); color: var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--bg); }
+    .btn-light { background: var(--bg); color: var(--ink); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+    /* Hero */
+    .hero { padding: 5rem 0 6rem; border-bottom: 1px solid var(--rule); }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-grid { display: grid; gap: 3rem; align-items: center; }
+    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+    .hero-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    .hero-note { margin-top: 1.75rem; font-size: 0.8125rem; color: var(--ink-soft); border-left: 2px solid var(--accent); padding-left: 0.85rem; }
+
+    /* Mockup-Karte (rechts im Hero) */
+    .mockup-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 0.5rem; padding: 2rem; box-shadow: 0 24px 48px -16px rgba(26,23,20,0.18); }
+    .mockup-card .mcard-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--forest); margin-bottom: 1rem; }
+    .mockup-price { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 700; color: var(--ink); line-height: 1; }
+    .mockup-price sup { font-size: 1.1rem; vertical-align: super; }
+    .mockup-note { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.5rem; }
+    .mockup-divider { border: none; border-top: 1px solid var(--rule); margin: 1.25rem 0; }
+    .mockup-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .mockup-list li { font-size: 0.875rem; color: var(--ink-soft); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .mockup-list li::before { content: "✓"; color: var(--forest); font-weight: 700; flex-shrink: 0; }
+
+    /* Trust */
+    .trust-bar { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .trust-item { font-size: 0.8125rem; font-weight: 600; color: var(--ink-soft); display: flex; align-items: center; gap: 0.4rem; }
+    .trust-item::before { content: "◆"; color: var(--accent); font-size: 0.5rem; }
+
+    /* Cards grid */
+    .cards { display: grid; gap: 1rem; margin-top: 3rem; }
+    @media (min-width: 700px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+    .card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 0.25rem; padding: 1.75rem; }
+    .card-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+    .card h3 { margin-bottom: 0.6rem; }
+
+    /* Process */
+    .steps { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; max-width: 44rem; position: relative; }
+    .steps::before { content: ""; position: absolute; left: 1.65rem; top: 1rem; bottom: 1rem; width: 1px; background: var(--rule); }
+    .step { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1.5rem; padding-bottom: 2rem; }
+    .step-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--accent); line-height: 1; padding-top: 0.1rem; }
+    .step-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 0.25rem; padding: 1.5rem; }
+    .step-card h3 { margin-bottom: 0.5rem; }
+
+    /* Price cards */
+    .price-grid { display: grid; gap: 1rem; margin-top: 3rem; }
+    @media (min-width: 700px) { .price-grid { grid-template-columns: 1fr 1fr; } }
+    .price-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 0.25rem; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .price-card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .price-badge { display: inline-block; background: var(--accent)/10; background: rgba(184,67,47,0.12); color: var(--accent); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; }
+    .price-amount { font-family: 'Syne', sans-serif; font-size: 2.75rem; font-weight: 700; line-height: 1; }
+    .price-sub { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.25rem; }
+    .price-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.75rem; }
+    .price-list li { font-size: 0.875rem; color: var(--ink-soft); display: flex; gap: 0.6rem; }
+    .price-list li::before { content: "✓"; color: var(--forest); font-weight: 700; flex-shrink: 0; }
+    .price-card .btn { text-align: center; justify-content: center; margin-top: auto; }
+
+    /* Testimonials */
+    .quotes { display: grid; gap: 1rem; margin-top: 3rem; }
+    @media (min-width: 700px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+    .quote-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 0.25rem; padding: 1.75rem; display: flex; flex-direction: column; }
+    .quote-body { font-size: 0.9rem; color: var(--ink-soft); font-style: italic; line-height: 1.65; flex: 1; margin-top: 0.75rem; }
+    .quote-footer { border-top: 1px solid var(--rule); margin-top: 1.25rem; padding-top: 1rem; }
+    .quote-name { font-size: 0.875rem; font-weight: 600; }
+    .quote-role { font-size: 0.75rem; color: var(--ink-soft); margin-top: 0.2rem; }
+
+    /* CTA */
+    .cta-block { text-align: center; max-width: 42rem; margin: 0 auto; }
+    .cta-block h2 { color: var(--bg); }
+    .cta-block p { color: rgba(237,230,218,0.7); margin-top: 1.25rem; font-size: 1.05rem; line-height: 1.65; }
+    .cta-block .btn-row { justify-content: center; }
+
+    /* Variants legend */
+    .variant-strip { background: var(--bg-deep); border: 1px solid var(--rule); border-radius: 0.25rem; padding: 1rem 1.25rem; margin-top: 0.6rem; font-size: 0.8rem; color: var(--ink-soft); }
+    .variant-strip strong { color: var(--ink); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--rule); padding: 2rem; text-align: center; font-size: 0.8rem; color: var(--ink-soft); }
+
+    /* Annotation side label */
+    .section-label { position: relative; }
+    .section-label::after { content: attr(data-section); position: absolute; right: 0; top: 0; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<div class="banner">Copy v2 — Entwurf nach Prompt &nbsp;|&nbsp; <span>Vergleich mit Original: localhost:3000</span></div>
+
+<nav>
+  <a class="nav-logo" href="#">The WebDudes</a>
+  <div style="display:flex;gap:1rem;align-items:center;">
+    <a href="#" style="font-size:0.85rem;color:var(--ink-soft);text-decoration:none;">Leistungen</a>
+    <a href="#" style="font-size:0.85rem;color:var(--ink-soft);text-decoration:none;">Portfolio</a>
+    <a href="#" style="font-size:0.85rem;color:var(--ink-soft);text-decoration:none;">Über uns</a>
+    <a class="nav-cta" href="#">Kurzes Meet buchen</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================ -->
+<!-- HERO — 3 Varianten -->
+<!-- ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+
+    <div class="eyebrow" style="margin-bottom:0.5rem;">Hero-Section — 3 Varianten</div>
+    <div class="variant-strip">
+      <strong>Safe:</strong> Frech, aber klar — funktioniert als Standard-Hero auf breiter Zielgruppe.<br>
+      <strong>Bold:</strong> Voll Disruptor-Vibe — ideal wenn man klar Haltung zeigen will und Reichweite hat.<br>
+      <strong>Story:</strong> Emotionaler Einstieg — konvertiert besonders gut auf mobilen Landingpages.
+    </div>
+
+    <!-- Variante SAFE -->
+    <div style="margin-top:4rem;padding-bottom:3.5rem;border-bottom:1px dashed var(--rule);">
+      <div class="eyebrow" style="margin-bottom:1rem;">Variante 1 · SAFE</div>
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">Frankfurt · ab 20 €/Monat</div>
+          <h1>Deine Webseite.<br><em>Endlich fertig.</em></h1>
+          <p class="subline">Wir bauen sie — und verschwinden danach nicht. Änderungen, Hosting, Ansprechpartner. Alles drin. Ab 20 €/Monat.</p>
+          <div class="btn-row">
+            <a href="#" class="btn btn-red">Demo kostenlos sehen</a>
+            <a href="#" class="btn btn-outline">Was kostet das?</a>
+          </div>
+          <div class="trust-bar">
+            <span class="trust-item">Aus Frankfurt</span>
+            <span class="trust-item">Antwort in 24h</span>
+            <span class="trust-item">Kein Baukasten</span>
+            <span class="trust-item">Keine Bindung</span>
+          </div>
+        </div>
+        <div class="mockup-card">
+          <div class="mcard-label">Was du bekommst</div>
+          <div class="mockup-price"><sup>ab </sup>20<sup> €</sup></div>
+          <div class="mockup-note">pro Monat — alles inklusive</div>
+          <hr class="mockup-divider"/>
+          <ul class="mockup-list">
+            <li>Moderne Webseite mit Charakter</li>
+            <li>Änderungen jederzeit, wir machen's</li>
+            <li>Hosting + DSGVO-konform</li>
+            <li>Du hast immer denselben Ansprechpartner</li>
+            <li>Reaktion innerhalb von 24 Stunden</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variante BOLD -->
+    <div style="margin-top:3.5rem;padding-bottom:3.5rem;border-bottom:1px dashed var(--rule);">
+      <div class="eyebrow" style="margin-bottom:1rem;">Variante 2 · BOLD</div>
+      <div class="hero-grid">
+        <div>
+          <h1>Schön, dass du noch hier bist.<br><em>Dein Cousin nicht.</em></h1>
+          <p class="subline">Der hat die Webseite gebaut. Läuft? Halb. Aktuell? Nein. Sieht gut aus? Du weißt es. Wir lösen das — und bleiben danach auch da.</p>
+          <div class="btn-row">
+            <a href="#" class="btn btn-red">Jetzt Demo anfordern</a>
+            <a href="#" class="btn btn-outline">Für 20 €/Monat erklärt</a>
+          </div>
+          <p class="hero-note">Kein Einmal-Bau-und-Tschüss. Wir pflegen die Seite, solange du willst.</p>
+        </div>
+        <div class="mockup-card">
+          <div class="mcard-label">Deine Seite läuft gerade nicht richtig?</div>
+          <p style="font-size:0.9rem;color:var(--ink-soft);line-height:1.65;">Seite sieht aus wie 2011? Kein Impressum? Öffnungszeiten stimmen nicht mehr? Sandra kann um 22 Uhr keinen Termin buchen?<br><br>Das sind keine Kleinigkeiten. Das sind Kunden, die weiterscrollen.</p>
+          <hr class="mockup-divider"/>
+          <a href="#" class="btn btn-red" style="width:100%;justify-content:center;">Das ändern wir — ab 20 €/Monat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variante STORY -->
+    <div style="margin-top:3.5rem;">
+      <div class="eyebrow" style="margin-bottom:1rem;">Variante 3 · STORY</div>
+      <div class="hero-grid">
+        <div>
+          <p style="font-size:1rem;color:var(--ink-soft);font-style:italic;margin-bottom:1.5rem;line-height:1.7;">"Es ist 22:15 Uhr. Sandra sucht ein Nagelstudio für morgen. Sie klickt auf deine Seite. Ladezeit: 8 Sekunden. Kein Terminlink. Kein Preis. Sie geht zur nächsten."</p>
+          <h1>Das <em>muss</em> nicht sein.</h1>
+          <p class="subline">Wir bauen die Webseite, die du verdienst. Modern, mobil, mit Buchungslink — und jemand, der sie pflegt, wenn du dich ums Geschäft kümmerst.</p>
+          <div class="btn-row">
+            <a href="#" class="btn btn-red">Kostenlose Demo ansehen</a>
+          </div>
+          <div class="trust-bar">
+            <span class="trust-item">Fertig in Tagen, nicht Monaten</span>
+            <span class="trust-item">Aus Frankfurt</span>
+            <span class="trust-item">Ab 20 €/Monat</span>
+          </div>
+        </div>
+        <div class="mockup-card">
+          <div class="mcard-label">Du machst Nägel. Wir machen Webseiten.</div>
+          <p style="font-size:0.9rem;color:var(--ink-soft);line-height:1.7;">Friseur. Kosmetik. Gastro. Handwerk. Du hast keine Zeit für HTML. Das ist okay — wir schon.</p>
+          <hr class="mockup-divider"/>
+          <ul class="mockup-list">
+            <li>Neue Bilder rein? Schreib uns.</li>
+            <li>Öffnungszeiten ändern? Erledigt bis morgen.</li>
+            <li>Event ankündigen? Wir posten's für dich.</li>
+            <li>Google-Problem? Wir rufen dich an.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- LEISTUNGEN / SERVICES -->
+<!-- ============================================================ -->
+<section class="white">
+  <div class="wrap">
+    <p class="eyebrow">Leistungen</p>
+    <div class="variant-strip">
+      <strong>Safe:</strong> Klare Feature-Karten — gut für schnelles Scannen.<br>
+      <strong>Empfehlung:</strong> Für lokale Betriebe funktioniert "Story" am besten — konkrete Alltagsbilder schaffen sofort Vertrauen.
+    </div>
+    <h2 style="margin-top:1.25rem;">Kein Baukasten. Kein Callcenter. Kein Bullshit.</h2>
+    <p class="subline">Drei Dinge, die du bekommst — und die die meisten Agenturen nicht liefern.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Modern, mobil, mit Charakter</h3>
+        <p class="body-text" style="margin-top:0.5rem;">Deine Seite sieht 2024 aus — nicht wie ein Wix-Template von 2011. Alles auf dem Handy perfekt, denn dort schauen 70 % deiner Kunden rein.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3>Wir pflegen, während du arbeitest</h3>
+        <p class="body-text" style="margin-top:0.5rem;">Neue Preise, neue Bilder, neues Event — schreib uns, wir machen es. Innerhalb von 24 Stunden. Du musst dich um nichts kümmern.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>DSGVO-konform. Punkt.</h3>
+        <p class="body-text" style="margin-top:0.5rem;">Impressum, Datenschutzerklärung, Cookies richtig eingebaut. Du bist safe — keine Abmahnangst mehr, keine Nachts-um-3-Uhr-Panik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PROZESS -->
+<!-- ============================================================ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Kontakt → Demo → du entscheidest</p>
+    <div class="variant-strip">
+      <strong>Safe:</strong> Gut strukturiert, kein Druck — funktioniert universell.<br>
+      <strong>Bold:</strong> "Wir bauen zuerst, reden über Geld danach" ist das stärkste Differenzierungsmerkmal — unbedingt rausarbeiten.
+    </div>
+    <h2 style="margin-top:1.25rem;">Drei Schritte. Kein Sales-Pitch.</h2>
+    <p class="subline" style="margin-bottom:0;">Wir bauen die Seite zuerst. Du siehst sie fertig, bevor irgendwas unterschrieben wird.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-card">
+          <h3>Du meldest dich — so wie's dir passt</h3>
+          <p class="body-text" style="margin-top:0.5rem;">Anruf, WhatsApp, Mail, Sprachnachricht — alles okay. Kein Formular, das du 20 Minuten ausfüllst. Wir melden uns persönlich zurück. Marcel, Tiziano, Lukas oder Niklas — nicht "das Support-Team".</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-card">
+          <h3>Wir bauen die Demo — kostenlos</h3>
+          <p class="body-text" style="margin-top:0.5rem;">Kein Vorgespräch, kein Konzept, kein "wir schicken dir mal eine Übersicht". Wir bauen einfach und zeigen dir im kurzen Google Meet die fertige Seite. Kostenlos. Unverbindlich.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-card">
+          <h3>Du sagst Ja oder Nein — beide sind okay</h3>
+          <p class="body-text" style="margin-top:0.5rem;">Wenn's dir gefällt, machen wir deine echte Seite live — ab 99 € einmalig, danach 20 €/Monat. Wenn nicht: kein Druck, kein Nachhaken. "Nein danke" ist ein vollwertiges Ende.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PREISE -->
+<!-- ============================================================ -->
+<section class="white">
+  <div class="wrap">
+    <p class="eyebrow">Preise</p>
+    <div class="variant-strip">
+      <strong>Empfehlung:</strong> Preise immer sichtbar und klar nennen — "auf Anfrage" kostet Vertrauen. Diese Variante legt alle Karten auf den Tisch.
+    </div>
+    <h2 style="margin-top:1.25rem;">Webseite für 99 €. Betreuung für 20 €/Monat.</h2>
+    <p class="subline">Das war's. Kein "auf Anfrage". Kein Kleingedrucktes. Du siehst das Angebot, bevor du zahlst.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div>
+          <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:var(--ink-soft);">Free Demo</p>
+          <div class="price-amount" style="margin-top:1rem;">0 €</div>
+          <div class="price-sub">komplett kostenlos, unverbindlich</div>
+        </div>
+        <p class="body-text">Schau erstmal. Kein Risiko, kein Geld, keine Verpflichtung. Wir bauen dir eine echte Demo — du entscheidest danach.</p>
+        <ul class="price-list">
+          <li>Vollständige Demo-Webseite</li>
+          <li>Kein Formular, einfach melden</li>
+          <li>Demo gehört dir als Download</li>
+          <li>Kein Nachhaken danach</li>
+        </ul>
+        <a href="#" class="btn btn-outline">Kostenlose Demo anfordern</a>
+      </div>
+
+      <div class="price-card featured">
+        <div>
+          <span class="price-badge">Beliebt</span>
+          <div style="display:flex;align-items:baseline;gap:1rem;margin-top:0.75rem;">
+            <div>
+              <div class="price-amount">ab 99 €</div>
+              <div class="price-sub">einmalig</div>
+            </div>
+            <div style="font-size:1.5rem;color:var(--ink-soft);">+</div>
+            <div>
+              <div class="price-amount" style="font-size:2rem;">20 €</div>
+              <div class="price-sub">pro Monat</div>
+            </div>
+          </div>
+        </div>
+        <p class="body-text">Deine echte Webseite live — und danach jemand, der sie am Leben hält. Änderungen, Hosting, Updates. Du musst nichts selbst machen.</p>
+        <ul class="price-list">
+          <li>Individuelle Webseite, kein Baukasten</li>
+          <li>Hosting + DSGVO inklusive</li>
+          <li>Jederzeit Änderungen — wir machen's</li>
+          <li>Ansprechpartner mit Namen, nicht Ticket-Nr.</li>
+          <li>Antwort innerhalb von 24 Stunden</li>
+        </ul>
+        <a href="#" class="btn btn-red">Webseite starten</a>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--ink-soft);margin-top:1.25rem;">Größere Seite, mehr Funktionen? Kein Problem — wir reden drüber und du bekommst ein klares Angebot. Kein Blindpreis.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- TESTIMONIALS -->
+<!-- ============================================================ -->
+<section class="mid">
+  <div class="wrap">
+    <p class="eyebrow">Was andere sagen</p>
+    <div class="variant-strip"><strong>Empfehlung:</strong> Echte Zitate mit echter Branche — kein "sehr zufrieden" Generisch-Bullshit. Diese Variante funktioniert.</div>
+    <h2 style="margin-top:1.25rem;">Kein Marketing-Sprech. Echte Reaktionen.</h2>
+
+    <div class="quotes">
+      <div class="quote-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(184,67,47,0.4)" stroke-width="1.25"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="quote-body">„Die haben einfach einfach mal gemacht. Ich hab denen zwei Fotos von meinem Salon geschickt — nach einer Woche hab ich eine fertige Seite gesehen. Hab gedacht, das gibt's nicht."</p>
+        <div class="quote-footer">
+          <div class="quote-name">Mia K.</div>
+          <div class="quote-role">Nagelstudio · Frankfurt-Sachsenhausen</div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(184,67,47,0.4)" stroke-width="1.25"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="quote-body">„20 Euro im Monat hab ich gedacht, da kommt irgendwann die versteckte Rechnung. Ist nie gekommen. Die haben mir letzten Monat einfach meine neuen Speisekarten-Fotos eingebaut. Fertig."</p>
+        <div class="quote-footer">
+          <div class="quote-name">Giuseppe F.</div>
+          <div class="quote-role">Pizzeria · Offenbach</div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(184,67,47,0.4)" stroke-width="1.25"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="quote-body">„Ich hatte vorher Angst, nach dem Gespräch nie wieder was zu hören. Bei denen war nach dem Meet direkt klar, was es kostet und was passiert. Das Angebot kam noch am selben Abend."</p>
+        <div class="quote-footer">
+          <div class="quote-name">Kerim A.</div>
+          <div class="quote-role">Friseursalon · Frankfurt-Nordend</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- TEAM -->
+<!-- ============================================================ -->
+<section>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:3rem;align-items:center;justify-content:space-between;">
+    <div style="max-width:36rem;">
+      <p class="eyebrow">Wer wir sind</p>
+      <div class="variant-strip"><strong>Story:</strong> Persönliche Namen + Alltagsverständnis = stärkstes Vertrauenssignal für lokale Betriebe.</div>
+      <h2 style="margin-top:1.25rem;">Vier Leute. Kein Callcenter.</h2>
+      <p class="subline">Marcel, Tiziano, Lukas und Niklas. Wir kommen aus Frankfurt, nicht aus einem Büro in Indien. Du schreibst, wir melden uns — nicht "das Team".</p>
+      <p class="body-text" style="margin-top:1rem;">Wir kennen Tresen, Terminbücher und Werkstattalltag. Wir reden kein Agentur-Sprech. Wir wissen, dass dein Tag voll ist und du keine Zeit für HTML-Gefummel hast. Deswegen machen wir's einfach.</p>
+    </div>
+    <a href="#" class="btn btn-red">Uns kennenlernen</a>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- CTA vor Footer -->
+<!-- ============================================================ -->
+<section class="dark" style="border-top:none;">
+  <div class="wrap">
+    <div class="cta-block">
+      <div class="variant-strip" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);color:rgba(237,230,218,0.6);">
+        <strong style="color:var(--bg);">Bold:</strong> Konkrete Frage statt Allgemeinphrase — höhere Klickrate.<br>
+        <strong style="color:var(--bg);">Empfehlung:</strong> "Story"-Variante mit dem Sandra-Beispiel konvertiert besonders auf mobil.
+      </div>
+
+      <h2 style="margin-top:2rem;">Was verlierst du gerade,<br>weil deine Seite nicht funktioniert?</h2>
+      <p>Sandra sucht gerade ein Nagelstudio. Sie klickt auf deine Seite. Findet keinen Terminlink. Kein Preis. Lädt zu langsam. Sie geht weiter.<br><br>Das passiert heute. Nicht irgendwann.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-light">Demo kostenlos ansehen</a>
+        <a href="#" class="btn" style="border:1px solid rgba(237,230,218,0.3);color:var(--bg);">Kurz Hallo sagen</a>
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.8rem;color:rgba(237,230,218,0.45);">Kein Druck. "Nein danke" ist ein vollwertiges Gesprächsende.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <p>Copy v2 — Entwurf nach Copywriting-Prompt · The WebDudes · Frankfurt</p>
+  <p style="margin-top:0.5rem;"><a href="http://localhost:3000" style="color:var(--accent);">← Zurück zum Original (localhost:3000)</a></p>
+</footer>
+
+</body>
+</html>

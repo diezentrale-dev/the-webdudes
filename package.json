@@ -1,0 +1,43 @@
+{
+  "name": "the-webdudes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The WebDudes – Marketing-Website (Next.js App Router)",
+  "scripts": {
+    "clean": "rm -rf .next node_modules/.cache",
+    "dev": "bash scripts/dev.sh",
+    "dev:clean": "bash scripts/dev.sh --clean",
+    "dev:fast": "NEXT_DEV_CLEAN=0 bash scripts/dev.sh",
+    "dev:only": "npm run clean && npx next dev --turbo -p 3000",
+    "build": "next build",
+    "verify": "npm run clean && npm run build && npm run lint",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "deploy": "vercel deploy --prod",
+    "deploy:preview": "vercel deploy"
+  },
+  "dependencies": {
+    "@tsparticles/engine": "^3.9.1",
+    "@tsparticles/react": "3.0.0",
+    "@tsparticles/slim": "^3.9.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.15.0",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.468.0",
+    "next": "15.5.15",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "15.5.15",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}
