@@ -11,6 +11,7 @@
     "dev:only": "npm run clean && npx next dev --turbo -p 3000",
     "build": "next build",
     "build:pages": "GITHUB_PAGES=true next build",
+    "deploy:github": "bash scripts/deploy-github-pages.sh",
     "verify": "npm run clean && npm run build && npm run lint",
     "start": "next start -p 3000",
     "lint": "next lint",
