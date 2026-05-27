@@ -1,4 +1,5 @@
 import { LEGAL } from "@/lib/legal-config";
+import { withBasePath } from "@/lib/base-path";
 
 /**
  * Zentraler Branding- und Site-Config.
@@ -16,7 +17,7 @@ export const SITE = {
   /** Initialen im Logo-Badge / Loader (nicht „TW“ – alter Platzhalter) */
   logoInitials: "WD",
   /** Markenlogo unter /public (PNG mit Transparenz) */
-  logoSrc: "/the-webdudes-logo.png",
+  logoSrc: withBasePath("/the-webdudes-logo.png"),
   /** Rechtliche Hülle – u. a. für Impressum / Rechtstexte (gleicher Wortlaut wie in legal-config) */
   legalName: "Theis Business Consulting UG (haftungsbeschränkt)",
   /** Kontakt-E-Mail (siehe legal-config) */
@@ -42,7 +43,7 @@ export const NAV_LINKS = [
 
 /** Live-Demo-Quellen (lokal unter /public/demos) */
 export const DEMO_IFRAME_SOURCES = [
-  { id: "nagelstudio", label: "Nagelstudio", src: "/demos/nagelstudio/index.html" },
-  { id: "pizzeria", label: "Pizzeria Mario", src: "/demos/pizzeria/index.html" },
-  { id: "antalya-friseur", label: "Antalya Friseur Salon", src: "/demos/antalya-friseur/index.html" },
+  { id: "nagelstudio", label: "Nagelstudio", src: withBasePath("/demos/nagelstudio/index.html") },
+  { id: "pizzeria", label: "Pizzeria Mario", src: withBasePath("/demos/pizzeria/index.html") },
+  { id: "antalya-friseur", label: "Antalya Friseur Salon", src: withBasePath("/demos/antalya-friseur/index.html") },
 ] as const;
