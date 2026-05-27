@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { PreviewButton } from "@/components/layout/PreviewButton";
 import { CookieBanner } from "@/components/cookies/CookieBanner";
+import { SitePasswordGate } from "@/components/layout/SitePasswordGate";
 import { FilmGrain } from "@/components/signature/FilmGrain";
 
 /** Verhindert kaputte `metadataBase`, wenn `NEXT_PUBLIC_SITE_URL` ungültig oder leer ist (kann sonst Asset-/Meta-Probleme auslösen). */
@@ -55,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${fontInter.variable} ${fontDisplay.variable}`}>
       <body>
+        <SitePasswordGate>
         <a href="#main-content" className="skip-link">
           Zum Inhalt springen
         </a>
@@ -67,6 +69,7 @@ export default function RootLayout({
         <CookieBanner />
         <PreviewButton />
         <FilmGrain />
+        </SitePasswordGate>
         {/*
           Optional: Analytics (Paket des Hosting-Anbieters) – nur nach DSGVO-konformer Einwilligung
           und Auftragsverarbeitung mit dem Anbieter aktivieren.
