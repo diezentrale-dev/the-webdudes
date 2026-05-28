@@ -16,6 +16,7 @@ echo "[pages] Build für GitHub Pages (${BASE_PATH}) …"
 GITHUB_PAGES=true \
 NEXT_PUBLIC_BASE_PATH="$BASE_PATH" \
 NEXT_PUBLIC_V2_ONLY=true \
+NEXT_PUBLIC_SITE_PASSWORD="${NEXT_PUBLIC_SITE_PASSWORD:-0601}" \
 npm run build:pages
 
 touch out/.nojekyll
