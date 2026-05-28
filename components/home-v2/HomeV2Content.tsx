@@ -22,8 +22,8 @@ export function HomeV2Content() {
         afterText="Du machst Nägel, Haare oder Pizzen. Wir machen Webseiten und bleiben danach dabei. 20 €/Monat, eine Änderung inklusive. Kein Einmal-Bau-und-Tschüss."
         ctaPrimary="Demo im Meet sehen"
         ctaSecondary="Was kostet das?"
-        ctaPrimaryHref={V2_LINKS.leistungen}
-        ctaSecondaryHref={V2_LINKS.portfolio}
+        ctaPrimaryHref={V2_LINKS.kontakt}
+        ctaSecondaryHref={V2_LINKS.leistungen}
       />
       <MarqueeBandV2 />
       <ProcessSectionV2 />

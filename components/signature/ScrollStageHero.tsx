@@ -36,8 +36,9 @@ type Props = {
 };
 
 /** Scroll-Strecke pro Demo (vh) — wie Video-Scrub: Seite bleibt oben, bis alles durch ist */
-const SCROLL_VH_PER_SLIDE = 120;
-const SCROLL_VH_OUTRO = 40;
+const SCROLL_SPEED = 0.5; // 50 % weniger Scroll bis die Animation durch ist
+const SCROLL_VH_PER_SLIDE = 120 * SCROLL_SPEED;
+const SCROLL_VH_OUTRO = 40 * SCROLL_SPEED;
 
 function headerOffset(): number {
   if (typeof window === "undefined") return 76;

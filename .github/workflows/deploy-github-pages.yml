@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-          NEXT_PUBLIC_SITE_PASSWORD: "0601"
+          NEXT_PUBLIC_V2_ONLY: "true"
         run: npm run build:pages
 
       - uses: actions/upload-pages-artifact@v3
