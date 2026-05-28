@@ -6,14 +6,14 @@ import { PageHero } from "@/components/motion/PageHero";
 export const metadata = {
   title: "Leistungen & Preise",
   description:
-    "Betreuung ab 20 €/Monat. Demo kostenlos im Meet. Webseite ab 99 € einmalig. Klare Preise, kein Kleingedrucktes.",
+    "Betreuung ab 20 €/Monat. Vorschau kostenlos im Meet. Webseite ab 99 € einmalig. Klare Preise, kein Kleingedrucktes.",
 };
 
 export default function LeistungenV2Page() {
   return (
     <div className="mesh-bg min-h-[50vh]">
       <PageHero eyebrow="Leistungen" title="20 €/Monat. Das ist unser Modell.">
-        Keine teuren Agentur-Rechnungen. Du siehst deine Demo kostenlos im Meet. Gefällt sie dir, geht
+        Keine teuren Agentur-Rechnungen. Du siehst deine Website-Vorschau kostenlos im Meet. Gefällt sie dir, geht
         deine Seite ab 99 € einmalig live. Danach halten wir alles am Laufen für 20 €/Monat. Pro Monat
         ist mindestens eine Änderung drin.
       </PageHero>

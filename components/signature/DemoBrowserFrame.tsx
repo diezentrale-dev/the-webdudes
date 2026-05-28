@@ -27,7 +27,7 @@ export function DemoBrowserFrame({ slides, activeIndex, scrub = false, className
         <span className="demo-browser__dot demo-browser__dot--y" />
         <span className="demo-browser__dot demo-browser__dot--g" />
         <span className="demo-browser__url">
-          {slides[activeIndex]?.label ?? "thewebdudes.de/demo"}
+          {slides[activeIndex]?.label ?? "thewebdudes.de"}
         </span>
       </div>
       <div className={cn("demo-browser__viewport", scrub && "demo-browser__viewport--scrub")}>

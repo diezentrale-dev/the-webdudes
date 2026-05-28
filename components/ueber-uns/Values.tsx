@@ -7,8 +7,8 @@ import { StaggerGroup } from "@/components/effects/StaggerGroup";
 
 const VALUES = [
   {
-    title: "Demo bleibt kostenlos",
-    text: "Die Demo-Webseite ist unverbindlich. Was ihr danach bucht – oder nicht – entscheidet ihr.",
+    title: "Vorschau bleibt kostenlos",
+    text: "Die Website-Vorschau ist unverbindlich. Was ihr danach bucht — oder nicht — entscheidet ihr.",
     icon: HeartHandshake,
   },
   {

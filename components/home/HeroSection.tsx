@@ -47,7 +47,7 @@ export function HeroSection() {
               </RippleLink>
               <RippleLink href="/portfolio" variant="secondary">
                 <PlayCircle className="h-4 w-4 text-accent-mint" aria-hidden />
-                Beispiele ansehen
+                Portfolio ansehen
               </RippleLink>
             </div>
           </RevealBlock>
@@ -62,7 +62,7 @@ export function HeroSection() {
             <GlowCard className="p-8 lg:p-10">
               <p className="section-eyebrow">So startet ihr</p>
               <p className="mt-4 font-display text-3xl font-semibold leading-tight text-[var(--text-primary)]">
-                Demo zuerst.
+                Vorschau zuerst.
                 <br />
                 Entscheidung danach.
               </p>
@@ -82,7 +82,7 @@ export function HeroSection() {
               </ul>
               <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/8 pt-8">
                 {[
-                  { v: "0 €", l: "Demo" },
+                  { v: "0 €", l: "Vorschau" },
                   { v: "99 €", l: "Projekt ab" },
                   { v: "3", l: "Schritte" },
                 ].map((m) => (

@@ -40,7 +40,7 @@ function PortfolioItemRow({ item, reverse, index }: { item: PortfolioItem; rever
             {item.styleDescription}
           </p>
           <RippleButton variant="secondary" className="mt-6" onClick={() => setActive(item)}>
-            Live-Demo öffnen
+            Website ansehen
             <ExternalLink className="h-4 w-4" aria-hidden />
           </RippleButton>
         </GlowCard>
@@ -54,7 +54,6 @@ function PortfolioItemRow({ item, reverse, index }: { item: PortfolioItem; rever
         posterImageUrl={active?.demoSrc ? active.imageUrl : undefined}
         imageUrl={active && !active.demoSrc ? active.imageUrl : undefined}
         imageAlt={active?.imageAlt}
-        footnote="Referenz: Stil und Layout. Eine individuelle Webseite mit echten Inhalten planen wir als Projekt ab 99 € – immer vorher im Angebot besprochen."
         loadIframeImmediately
       />
     </>

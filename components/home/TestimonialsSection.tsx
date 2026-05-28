@@ -1,6 +1,7 @@
 "use client";
 
 import { Quote } from "lucide-react";
+import { SHOW_TESTIMONIALS } from "@/lib/config";
 import { RevealBlock } from "@/components/effects/RevealBlock";
 
 const TESTIMONIALS = [
@@ -12,7 +13,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Die Demo war wirklich kostenlos. Im Meet haben wir die fertige Seite gesehen, nicht nur Slides.",
+      "Die Vorschau war wirklich kostenlos. Im Meet haben wir die fertige Seite gesehen, nicht nur Slides.",
     name: "Betreiber",
     role: "Pizzeria · Umgebung",
   },
@@ -25,6 +26,8 @@ const TESTIMONIALS = [
 ] as const;
 
 export function TestimonialsSection() {
+  if (!SHOW_TESTIMONIALS) return null;
+
   return (
     <section className="border-y border-[var(--rule)] bg-[var(--bg-paper-deep)] py-24 sm:py-28">
       <div className="mx-auto max-w-[var(--page-max)] px-4 sm:px-6 lg:px-8">

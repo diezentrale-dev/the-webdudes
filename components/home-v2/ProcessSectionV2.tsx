@@ -12,14 +12,14 @@ const STAGES = [
   },
   {
     n: "02",
-    title: "Wir bauen die Demo. Du siehst sie im Meet.",
+    title: "Wir bauen die Vorschau. Du siehst sie im Meet.",
     text: "Kein Vorgespräch, kein Konzept-PDF, kein \"wir schicken dir mal was zu\". Wir bauen und zeigen dir die fertige Seite live im kurzen Google Meet. Kostenlos. Unverbindlich.",
     icon: Wand2,
   },
   {
     n: "03",
     title: "Ja oder Nein. Danach 20 €/Monat.",
-    text: "Gefällt dir die Demo, geht deine Seite ab 99 € einmalig live. Danach läuft alles über das Monatspaket: 20 €/Monat, Hosting, Updates, mindestens eine Änderung pro Monat. Wenn nicht: kein Druck, kein Nachhaken.",
+    text: "Gefällt dir die Vorschau, geht deine Seite ab 99 € einmalig live. Danach läuft alles über das Monatspaket: 20 €/Monat, Hosting, Updates, mindestens eine Änderung pro Monat. Wenn nicht: kein Druck, kein Nachhaken.",
     icon: ThumbsUp,
   },
 ];
@@ -29,12 +29,12 @@ export function ProcessSectionV2() {
     <section className="border-b border-[var(--rule)] bg-[var(--bg-white)] py-24 sm:py-28">
       <div className="mx-auto max-w-[var(--page-max)] px-4 sm:px-6 lg:px-8">
         <RevealBlock>
-          <p className="section-eyebrow">Melden → Demo sehen → du entscheidest</p>
+          <p className="section-eyebrow">Melden → Vorschau sehen → du entscheidest</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold text-[var(--ink)] sm:text-4xl">
             Drei Schritte. Kein Sales-Pitch.
           </h2>
           <p className="mt-4 max-w-xl text-[var(--ink-soft)]">
-            Wir zeigen dir die fertige Demo im Meet. Erst danach entscheidest du.
+            Wir zeigen dir die fertige Vorschau im Meet. Erst danach entscheidest du.
           </p>
         </RevealBlock>
 

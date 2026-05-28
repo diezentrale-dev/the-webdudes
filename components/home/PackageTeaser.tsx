@@ -19,7 +19,7 @@ export function PackageTeaser() {
               Zwei Wege, eine gute Seite.
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-[var(--ink-soft)]">
-              Der erste ist kostenlos: Eine fertige Demo, mit der ihr unsere Arbeit kennenlernt. Der
+              Der erste ist kostenlos: Eine fertige Website-Vorschau, mit der ihr unsere Arbeit kennenlernt. Der
               zweite startet bei 99 € und führt zu eurer eigenen Webseite – mit einem klaren Angebot,
               abgestimmt auf das, was zu eurem Laden passt.
             </p>

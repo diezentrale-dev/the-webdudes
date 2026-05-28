@@ -1,7 +1,7 @@
 "use client";
 
 const ITEMS = [
-  "Demo kostenlos",
+  "Vorschau kostenlos",
   "Projekt ab 99 €",
   "Frankfurt · Rhein-Main",
   "Kein Kleingedrucktes",

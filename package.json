@@ -10,6 +10,7 @@
     "dev:fast": "NEXT_DEV_CLEAN=0 bash scripts/dev.sh",
     "dev:only": "npm run clean && npx next dev --turbo -p 3000",
     "build": "next build",
+    "build:forma-demo": "bash scripts/build-forma-demo.sh",
     "build:pages": "GITHUB_PAGES=true next build",
     "deploy:github": "bash scripts/deploy-github-pages.sh",
     "verify": "npm run clean && npm run build && npm run lint",

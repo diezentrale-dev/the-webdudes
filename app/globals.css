@@ -348,6 +348,16 @@ body {
     background: #faf7f2;
   }
 
+  .portfolio-demo-preview .demo-browser__viewport {
+    position: relative;
+  }
+
+  .portfolio-demo-preview .demo-browser__viewport iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
   .demo-browser__scanline {
     position: absolute;
     inset: 0;

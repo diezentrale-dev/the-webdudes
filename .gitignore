@@ -22,6 +22,9 @@
 /build
 /out
 
+# Generiert: npm run build:forma-demo
+/public/demos/forma-studio/
+
 # misc
 .DS_Store
 *.pem

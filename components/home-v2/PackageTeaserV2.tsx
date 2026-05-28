@@ -20,7 +20,7 @@ export function PackageTeaserV2() {
               20 €/Monat. Nicht teure Einmalprojekte.
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-[var(--ink-soft)]">
-              Demo kostenlos im Meet. Seite ab 99 € einmalig. Danach Betreuung mit mindestens einer Änderung pro Monat.
+              Vorschau kostenlos im Meet. Seite ab 99 € einmalig. Danach Betreuung mit mindestens einer Änderung pro Monat.
             </p>
           </div>
           <Link href={V2_LINKS.leistungen} className="btn-secondary shrink-0 self-start">

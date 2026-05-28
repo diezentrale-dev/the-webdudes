@@ -6,14 +6,14 @@ import { PageHero } from "@/components/motion/PageHero";
 export const metadata = {
   title: "Leistungen & Preise",
   description:
-    "Zwei Modelle: kostenlose Demo-Webseite oder individuelles Projekt ab 99 € einmalig – klar erklärt, ohne verstecktes Kleingedrucktes.",
+    "Zwei Modelle: kostenlose Website-Vorschau oder individuelles Projekt ab 99 € einmalig – klar erklärt, ohne verstecktes Kleingedrucktes.",
 };
 
 export default function LeistungenPage() {
   return (
     <div className="mesh-bg min-h-[50vh]">
       <PageHero eyebrow="Leistungen" title="Zwei Wege zu deiner neuen Webseite">
-        Du startest mit einer kostenlosen Demo oder gehst direkt ins Projekt – individuelle Webseite
+        Du startest mit einer kostenlosen Vorschau im Meet oder gehst direkt ins Projekt – individuelle Webseite
         ab 99 €. Beides ist vorher klar erklärt, ohne Druck und ohne Kleingedrucktes.
       </PageHero>
 

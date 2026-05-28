@@ -5,18 +5,18 @@ export const PRICING_CTA_HREF_V2 = `${V2_LINKS.kontakt}#erstgespraech` as const;
 
 export const PRICING_MODELS_V2: PricingModel[] = [
   {
-    id: "demo",
-    name: "Demo ansehen",
+    id: "preview",
+    name: "Vorschau ansehen",
     priceOnce: "0 €",
     priceNote: "kostenlos im Kurz-Meet",
-    blurb: "Wir bauen deine Demo und zeigen sie dir live. Nicht per Mail, nicht als Download. Du schaust, du entscheidest.",
+    blurb: "Wir bauen deine Website-Vorschau und zeigen sie dir live. Nicht per Mail, nicht als Download. Du schaust, du entscheidest.",
     features: [
-      "Fertige Demo-Webseite für deinen Betrieb",
+      "Fertige Vorschau-Webseite für deinen Betrieb",
       "Im kurzen Google Meet gezeigt, nicht als Slides",
       "Kein Versand, kein PDF, kein Link per Mail",
       "Unverbindlich. \"Nein\" ist okay.",
     ],
-    ctaLabel: "Demo-Termin buchen",
+    ctaLabel: "Termin buchen",
     ctaHref: PRICING_CTA_HREF_V2,
   },
   {
@@ -55,4 +55,4 @@ export const PRICING_MODELS_V2: PricingModel[] = [
 ];
 
 export const PRICING_DISCLAIMER_V2 =
-  "Die Demo zeigen wir dir kostenlos im Meet. Wir schicken dir nichts zu. Der Einstieg für deine echte Seite liegt bei 99 €. Unser Fokus ist die Betreuung für 20 €/Monat. Das Nur-Betreuung-Paket gilt nur für Webseiten von uns. Ohne Mindestlaufzeit.";
+  "Die Vorschau zeigen wir dir kostenlos im Meet. Wir schicken dir nichts zu. Der Einstieg für deine echte Seite liegt bei 99 €. Unser Fokus ist die Betreuung für 20 €/Monat. Das Nur-Betreuung-Paket gilt nur für Webseiten von uns. Ohne Mindestlaufzeit.";

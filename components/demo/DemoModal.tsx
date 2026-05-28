@@ -146,10 +146,9 @@ export function DemoModal({
                     alt={imageAlt ?? ""}
                     className="max-h-[55vh] w-full max-w-2xl rounded-2xl object-cover shadow-soft"
                   />
-                  <p className="max-w-md text-sm text-ink-700">
-                    {footnote ??
-                      "Mockup / Demo. Wollt ihr so etwas für euren Betrieb, meldet euch – wir setzen euch eine echte Version auf."}
-                  </p>
+                  {footnote ? (
+                    <p className="max-w-md text-sm text-ink-700">{footnote}</p>
+                  ) : null}
                 </div>
               ) : (
                 <p className="p-6 text-sm text-ink-700">Keine Vorschau verfügbar.</p>

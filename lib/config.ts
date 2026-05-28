@@ -24,14 +24,17 @@ export const SITE = {
   email: LEGAL.email,
   /** Kurz für Meta & Footer */
   description:
-    "Kostenlose Demo-Webseite oder individuelles Projekt ab 99 € – WebDudes-Stil, klar erklärt, ohne verstecktes Kleingedrucktes.",
+    "Kostenlose Website-Vorschau im Meet oder individuelles Projekt ab 99 € – WebDudes-Stil, klar erklärt, ohne verstecktes Kleingedrucktes.",
   /** Für Seitentitel und Open Graph (Kernsatz) */
   metaTitle: "Gute Arbeit verdient eine gute Webseite",
 } as const;
 
 /** Kern-Narrativ (variiert auf den Seiten, nicht wörtlich überall gleich) */
 export const CORE_NARRATIVE =
-  "Du kannst mit einer kostenlosen Demo starten oder direkt ein Projekt ab 99 € angehen – individuelle Webseite, nach Absprache im Angebot beziffert. Wir bleiben klar und ohne Druck.";
+  "Du kannst mit einer kostenlosen Vorschau im Meet starten oder direkt ein Projekt ab 99 € angehen – individuelle Webseite, nach Absprache im Angebot beziffert. Wir bleiben klar und ohne Druck.";
+
+/** Kundenstimmen-Sektion — auf true setzen, sobald echte Rezensionen vorliegen */
+export const SHOW_TESTIMONIALS = false;
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -41,9 +44,21 @@ export const NAV_LINKS = [
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
 
-/** Live-Demo-Quellen (lokal unter /public/demos) */
+/** Portfolio-Vorschau-Quellen (lokal unter /public/demos) */
 export const DEMO_IFRAME_SOURCES = [
-  { id: "nagelstudio", label: "Nagelstudio", src: withBasePath("/demos/nagelstudio/index.html") },
-  { id: "pizzeria", label: "Pizzeria Mario", src: withBasePath("/demos/pizzeria/index.html") },
-  { id: "antalya-friseur", label: "Antalya Friseur Salon", src: withBasePath("/demos/antalya-friseur/index.html") },
+  {
+    id: "standard",
+    label: "Antalya Friseur Salon",
+    src: withBasePath("/demos/antalya-friseur/index.html"),
+  },
+  {
+    id: "premium",
+    label: "FORMA Studio",
+    src: withBasePath("/demos/forma-studio/index.html"),
+  },
+  {
+    id: "awesome",
+    label: "NOIRÉ",
+    src: withBasePath("/demos/noire/index.html"),
+  },
 ] as const;

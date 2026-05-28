@@ -16,11 +16,18 @@ export function PricingGrid({ models, columns = 2 }: { models: PricingModel[]; c
             as="article"
             className={`flex h-full flex-col p-8 [&_.glow-card__content]:flex [&_.glow-card__content]:h-full [&_.glow-card__content]:flex-col ${m.recommended ? "ring-1 ring-accent-warm/25 shadow-glow" : ""}`}
           >
-            {m.recommended ? (
-              <span className="mb-4 inline-flex w-fit rounded-full bg-accent-warm/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-warm">
-                Empfohlen
-              </span>
-            ) : null}
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              {m.tierLabel ? (
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
+                  {m.tierLabel}
+                </span>
+              ) : null}
+              {m.recommended ? (
+                <span className="inline-flex rounded-full bg-accent-warm/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-warm">
+                  Empfohlen
+                </span>
+              ) : null}
+            </div>
             <h2 className="font-display text-2xl font-semibold text-[var(--text-primary)]">{m.name}</h2>
             <p className="mt-4 font-display text-3xl font-semibold text-[var(--text-primary)]">{m.priceOnce}</p>
             {m.priceNote ? <p className="mt-1 text-sm text-[var(--text-muted)]">{m.priceNote}</p> : null}

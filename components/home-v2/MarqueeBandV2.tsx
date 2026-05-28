@@ -1,7 +1,7 @@
 "use client";
 
 const ITEMS = [
-  "Demo im Meet · kostenlos",
+  "Vorschau im Meet · kostenlos",
   "20 €/Monat Betreuung",
   "1 Änderung pro Monat inkl.",
   "Frankfurt & Rhein-Main",

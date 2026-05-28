@@ -24,7 +24,7 @@ export function FinalCtaV2() {
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-sm bg-[var(--bg-paper)] px-8 py-3 text-sm font-semibold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden />
-                Demo-Termin buchen
+                Termin buchen
               </Link>
             </div>
             <p className="mt-6 text-sm text-[var(--bg-paper)]/40">

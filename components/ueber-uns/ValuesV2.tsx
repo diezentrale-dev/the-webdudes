@@ -12,7 +12,7 @@ const VALUES = [
     icon: Wrench,
   },
   {
-    title: "Demo im Meet, kostenlos",
+    title: "Vorschau im Meet, kostenlos",
     text: "Wir zeigen dir die fertige Seite live. Nicht per Mail, nicht als Download. Erst schauen, dann entscheiden. Nein ist okay.",
     icon: HeartHandshake,
   },

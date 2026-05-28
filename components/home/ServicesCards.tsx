@@ -17,8 +17,8 @@ const CARDS = [
     span: "bento-span-5",
   },
   {
-    title: "Kosten: Demo gratis, Projekt ab 99 €",
-    text: "Demo-Webseite ist bei uns kostenlos und unverbindlich. Für eine individuelle Seite – Design, Funktionen und Hosting nach Absprache – startet ihr bei ab 99 € einmalig; den genauen Betrag seht ihr im Angebot, bevor ihr zahlt.",
+    title: "Kosten: Vorschau gratis, Projekt ab 99 €",
+    text: "Die Website-Vorschau ist bei uns kostenlos und unverbindlich. Für eine individuelle Seite — Design, Funktionen und Hosting nach Absprache — startet ihr bei ab 99 € einmalig; den genauen Betrag seht ihr im Angebot, bevor ihr zahlt.",
     icon: BadgeEuro,
     span: "bento-span-5",
   },

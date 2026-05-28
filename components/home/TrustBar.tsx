@@ -6,7 +6,7 @@ import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 const TRUST_ITEMS = [
   { icon: Shield, label: "Klar & ohne Druck" },
   { icon: BadgeCheck, label: "Angebot vor Zahlung" },
-  { icon: Sparkles, label: "Demo kostenlos" },
+  { icon: Sparkles, label: "Vorschau kostenlos" },
 ] as const;
 
 export function TrustBar() {

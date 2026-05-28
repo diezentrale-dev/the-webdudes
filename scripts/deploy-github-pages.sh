@@ -12,6 +12,12 @@ fi
 REPO="${GITHUB_REPOSITORY:-diezentrale-dev/the-webdudes}"
 BASE_PATH="/${REPO##*/}"
 
+echo "[pages] FORMA Premium-Demo (${BASE_PATH}/demos/forma-studio) …"
+bash scripts/build-forma-demo.sh "${BASE_PATH}/demos/forma-studio"
+
+echo "[pages] NOIRÉ Awesome-Demo (${BASE_PATH}/demos/noire) …"
+bash scripts/build-noire-demo.sh "${BASE_PATH}/demos/noire"
+
 echo "[pages] Build für GitHub Pages (${BASE_PATH}) …"
 GITHUB_PAGES=true \
 NEXT_PUBLIC_BASE_PATH="$BASE_PATH" \

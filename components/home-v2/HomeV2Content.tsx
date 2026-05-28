@@ -18,9 +18,9 @@ export function HomeV2Content() {
           ["Für immer", "betreut."],
         ]}
         eyebrow="Frankfurt · ab 20 €/Monat"
-        sidenote="Wir bauen deine Demo und zeigen sie dir im Meet. Kostenlos. Nicht per Mail, nicht als Download."
+        sidenote="Wir bauen deine Website-Vorschau und zeigen sie dir im Meet. Kostenlos. Nicht per Mail, nicht als Download."
         afterText="Du machst Nägel, Haare oder Pizzen. Wir machen Webseiten und bleiben danach dabei. 20 €/Monat, eine Änderung inklusive. Kein Einmal-Bau-und-Tschüss."
-        ctaPrimary="Demo im Meet sehen"
+        ctaPrimary="Vorschau im Meet sehen"
         ctaSecondary="Was kostet das?"
         ctaPrimaryHref={V2_LINKS.kontakt}
         ctaSecondaryHref={V2_LINKS.leistungen}

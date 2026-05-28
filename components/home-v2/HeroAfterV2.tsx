@@ -26,7 +26,7 @@ export function HeroAfterV2() {
           </MagneticWrap>
           <MagneticWrap>
             <RippleLink href={V2_LINKS.portfolio} variant="secondary">
-              Beispiele ansehen
+              Portfolio ansehen
             </RippleLink>
           </MagneticWrap>
         </div>

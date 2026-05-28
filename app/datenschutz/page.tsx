@@ -119,11 +119,11 @@ export default function DatenschutzPage() {
         entgegenstehen.
       </p>
 
-      <h2>8. Eingebettete Inhalte (Portfolio / Live-Demos)</h2>
+      <h2>8. Eingebettete Inhalte (Portfolio / Vorschauen)</h2>
       <p>
-        Auf der Seite „Portfolio“ können eingebettete Demos (iframes) anderer Webprojekte gezeigt
-        werden. Die eingebetteten Inhalte werden <strong>geladen, sobald Sie aktiv „Live-Demo
-        öffnen“ wählen</strong> und sich der Dialog öffnet. Dabei können Daten an den jeweiligen
+        Auf der Seite „Portfolio“ können eingebettete Vorschauen (iframes) anderer Webprojekte gezeigt
+        werden. Die eingebetteten Inhalte werden <strong>geladen, sobald Sie aktiv „Website ansehen“
+        wählen</strong> und sich der Dialog öffnet. Dabei können Daten an den jeweiligen
         Server übertragen werden (z. B. IP-Adresse, technische Metadaten). Für Inhalte Dritter gelten
         deren Datenschutzhinweise.
       </p>

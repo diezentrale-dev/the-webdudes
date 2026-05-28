@@ -10,8 +10,8 @@ import { RevealBlock } from "@/components/effects/RevealBlock";
 export function Footer() {
   const pathname = usePathname();
   const tagline = isV2PreviewMode() || pathname.startsWith("/v2")
-    ? "Betreuung ab 20 €/Monat. Demo kostenlos im Meet. Kein Kauderwelsch, kein Druck."
-    : "Demo-Webseite kostenlos – Projekt ab 99 €. Kein Kauderwelsch, kein Druck.";
+    ? "Betreuung ab 20 €/Monat. Vorschau kostenlos im Meet. Kein Kauderwelsch, kein Druck."
+    : "Website-Vorschau kostenlos – Projekt ab 99 €. Kein Kauderwelsch, kein Druck.";
 
   return (
     <footer className="border-t border-[var(--rule)] bg-[var(--bg-white)]">

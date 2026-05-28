@@ -45,9 +45,8 @@ export default function AgbPage() {
       </p>
       <ul>
         <li>
-          <strong>Kostenlose Demo-Webseite</strong> (0 €): unverbindliche Demo im WebDudes-Stil zur
-          Vorstellung der Arbeit; Übergabe erfolgt mit Dateien zum Download für die Unterlagen des
-          Auftraggebers.
+          <strong>Kostenlose Website-Vorschau</strong> (0 €): unverbindliche Vorschau im WebDudes-Stil zur
+          Vorstellung der Arbeit; gezeigt im vereinbarten Kurz-Meet.
         </li>
         <li>
           <strong>Individuelle Webseite</strong>: Erstellung und Übergabe bzw. Einrichtung einer
@@ -64,7 +63,7 @@ export default function AgbPage() {
         angeboten.
       </p>
       <p>
-        Der Auftraggeber entscheidet frei, ob er nach der Demo oder nach einem Projekt weitere
+        Der Auftraggeber entscheidet frei, ob er nach der Vorschau oder nach einem Projekt weitere
         Leistungen bucht. Zusatzleistungen erfolgen nach Aufwand oder nach Angebot. Individuelle
         Anforderungen können zu Preisanpassungen führen, wie auf der Leistungsseite dargestellt.
       </p>
@@ -91,12 +90,12 @@ export default function AgbPage() {
       <p>
         Die Vergütung für ein individuelles Projekt wird mit Abnahme der vereinbarten Leistung bzw.
         nach den im Angebot genannten Fälligkeiten fällig, sofern nichts Abweichendes vereinbart
-        wurde. Die kostenlose Demo-Webseite ist unentgeltlich.
+        wurde. Die kostenlose Website-Vorschau ist unentgeltlich.
       </p>
       <p>
         Für gesondert vereinbarte laufende Leistungen (z. B. Wartung, Pflege) gilt die jeweils
         schriftlich vereinbarte Vergütung und Abrechnungsperiode. Es besteht keine automatische
-        Kopplung an die Demo oder das Projektangebot.
+        Kopplung an die Vorschau oder das Projektangebot.
       </p>
       <p>
         Bei Zahlungsverzug gelten die gesetzlichen Regelungen; der Auftragnehmer ist berechtigt,
@@ -106,7 +105,7 @@ export default function AgbPage() {
       <h2>§ 6 Laufzeit und Kündigung</h2>
       <p>
         Die Erstellung und Abnahme eines individuellen Projekts sowie die Bereitstellung der
-        kostenlosen Demo sind auf den jeweils vereinbarten Leistungsumfang ausgerichtet und
+        kostenlosen Vorschau sind auf den jeweils vereinbarten Leistungsumfang ausgerichtet und
         begründen <strong>keine unbefristete Laufzeit</strong> für die Erstellung selbst; mit
         Abnahme der vereinbarten Leistung ist der Werkvertrag über die Erstellung abgeschlossen,
         soweit nichts anderes vereinbart.

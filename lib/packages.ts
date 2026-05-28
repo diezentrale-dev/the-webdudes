@@ -6,6 +6,8 @@ export const PRICING_CTA_HREF = "/kontakt#erstgespraech" as const;
 
 export type PricingModel = {
   id: string;
+  /** z. B. Standard · Premium · Awesome */
+  tierLabel?: string;
   name: string;
   priceOnce: string;
   /** Optional dargestellt unter dem Preis (kleinerer Text) */
@@ -20,18 +22,18 @@ export type PricingModel = {
 
 export const PRICING_MODELS: PricingModel[] = [
   {
-    id: "demo",
-    name: "Free Demo-Webseite",
+    id: "preview",
+    name: "Kostenlose Website-Vorschau",
     priceOnce: "0 €",
     priceNote: "kostenlos",
     blurb: "So lernt ihr unsere Arbeit ohne Risiko kennen.",
     features: [
-      "Vollständige Demo-Webseite im WebDudes-Stil",
+      "Vollständige Vorschau-Webseite im WebDudes-Stil",
       "Komplett kostenlos und unverbindlich",
       "Perfekt, um unsere Arbeit kennenzulernen",
-      "Inklusive Datei-Download für eure Unterlagen",
+      "Im kurzen Google Meet gezeigt",
     ],
-    ctaLabel: "Jetzt kostenlose Demo anfordern",
+    ctaLabel: "Jetzt Termin buchen",
     ctaHref: PRICING_CTA_HREF,
   },
   {
@@ -53,4 +55,4 @@ export const PRICING_MODELS: PricingModel[] = [
 ];
 
 export const PRICING_DISCLAIMER =
-  "Die Demo-Webseite ist kostenlos und unverbindlich. Bei einem individuellen Projekt ist der genannte Betrag ein Startpreis – der finale Preis steht im schriftlichen Angebot, bevor ihr zahlt. Änderungen über das Vereinbarte hinaus klären wir vorher.";
+  "Die Website-Vorschau ist kostenlos und unverbindlich. Bei einem individuellen Projekt ist der genannte Betrag ein Startpreis – der finale Preis steht im schriftlichen Angebot, bevor ihr zahlt. Änderungen über das Vereinbarte hinaus klären wir vorher.";

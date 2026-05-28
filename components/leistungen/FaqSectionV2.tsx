@@ -12,11 +12,11 @@ const FAQ = [
   },
   {
     q: "Muss ich das Abo abschließen?",
-    a: "Wenn deine Seite live geht, läuft sie über das Monatspaket. Das ist unser Modell. Du startest mit einer kostenlosen Demo im Meet. Gefällt sie dir, geht die Seite ab 99 € einmalig online. Danach 20 €/Monat. Ohne Mindestlaufzeit.",
+    a: "Wenn deine Seite live geht, läuft sie über das Monatspaket. Das ist unser Modell. Du startest mit einer kostenlosen Vorschau im Meet. Gefällt sie dir, geht die Seite ab 99 € einmalig online. Danach 20 €/Monat. Ohne Mindestlaufzeit.",
   },
   {
-    q: "Was ist bei der kostenlosen Demo dabei?",
-    a: "Wir bauen eine fertige Demo für deinen Betrieb und zeigen sie dir im kurzen Google Meet. Nicht per Mail, nicht als Download. Du siehst echte Arbeit, keine Slides. Unverbindlich.",
+    q: "Was ist bei der kostenlosen Vorschau dabei?",
+    a: "Wir bauen eine fertige Website-Vorschau für deinen Betrieb und zeigen sie dir im kurzen Google Meet. Nicht per Mail, nicht als Download. Du siehst echte Arbeit, keine Slides. Unverbindlich.",
   },
   {
     q: "Wie schnell kommen Änderungen online?",

@@ -13,13 +13,13 @@ const STAGES = [
   {
     n: "02",
     title: "Im kurzen Meet",
-    text: "Zuerst bauen wir, dann zeigen wir: Im kurzen Google Meet seht ihr die Demo-Webseite. Kostenlos, unverbindlich. Kein Verkaufs-Show.",
+    text: "Zuerst bauen wir, dann zeigen wir: Im kurzen Google Meet seht ihr die Website-Vorschau. Kostenlos, unverbindlich. Kein Verkaufs-Show.",
     icon: Wand2,
   },
   {
     n: "03",
     title: "Ihr entscheidet",
-    text: "Die Demo bleibt kostenlos. Für eine individuelle Live-Webseite reden wir über ein Projekt ab 99 € – angepasst an euren Laden. Oder ihr behaltet nur die Demo: ohne Zwang.",
+    text: "Die Vorschau bleibt kostenlos. Für eine individuelle Live-Webseite reden wir über ein Projekt ab 99 € — angepasst an euren Laden. Oder ihr behaltet nur die Vorschau: ohne Zwang.",
     icon: Rocket,
   },
 ];

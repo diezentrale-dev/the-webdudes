@@ -12,7 +12,7 @@ import { RippleLink } from "@/components/effects/RippleButton";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const SLIDES = PORTFOLIO_ITEMS.map((p) => ({
-  label: p.title.toLowerCase().replace(/\s+/g, "-") + ".de",
+  label: p.previewLabel ?? p.title,
   imageUrl: p.imageUrl,
   imageAlt: p.imageAlt,
   demoSrc: p.demoSrc,
@@ -62,10 +62,10 @@ function getScrollProgress(wrap: HTMLElement): number {
 export function ScrollStageHero({
   headlineLines = HEADLINE_LINES_DEFAULT,
   eyebrow = "Frankfurt · Web & Design",
-  sidenote = "Wir bauen zuerst — ihr seht im Meet die fertige Demo. Kostenlos. Unverbindlich.",
+  sidenote = "Wir bauen zuerst — ihr seht im Meet die fertige Vorschau. Kostenlos. Unverbindlich.",
   afterText = "Friseur, Gastro, Handwerk, Kosmetik, Fachgeschäft: Oft seid ihr online kaum zu finden. Wir bauen euch die Webseite fertig — und schenken sie.",
   ctaPrimary = "Leistungen & Kosten",
-  ctaSecondary = "Beispiele ansehen",
+  ctaSecondary = "Portfolio ansehen",
   ctaPrimaryHref = "/leistungen",
   ctaSecondaryHref = "/portfolio",
 }: Props = {}) {
@@ -319,7 +319,7 @@ export function ScrollStageHero({
               <div ref={browserRef} className="hero-browser-wrap">
                 <DemoBrowserFrame slides={SLIDES} activeIndex={activeSlide} scrub={useStickyScroll} />
                 <p className="hero-browser-caption">
-                  Live-Demo · {SLIDES[activeSlide]?.label}
+                  Vorschau · {SLIDES[activeSlide]?.label}
                 </p>
               </div>
             </div>

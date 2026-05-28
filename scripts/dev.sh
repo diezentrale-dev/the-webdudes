@@ -15,6 +15,16 @@ fi
 
 PORT="${PORT:-3000}"
 
+if [[ ! -f "$ROOT/public/demos/forma-studio/index.html" ]]; then
+  echo "[dev] FORMA Premium-Demo fehlt — einmaliger Embed-Build …"
+  bash "$ROOT/scripts/build-forma-demo.sh"
+fi
+
+if [[ ! -f "$ROOT/public/demos/noire/index.html" ]]; then
+  echo "[dev] NOIRÉ Awesome-Demo fehlt — einmaliger Embed-Build …"
+  bash "$ROOT/scripts/build-noire-demo.sh"
+fi
+
 if [[ "${1:-}" == "--clean" ]]; then
   export NEXT_DEV_CLEAN=1
 fi

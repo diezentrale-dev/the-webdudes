@@ -8,15 +8,15 @@ import { StaggerGroup } from "@/components/effects/StaggerGroup";
 const FAQ = [
   {
     q: "Fallen nach dem Projekt automatisch monatliche Kosten an?",
-    a: "Nein. Solange ihr nichts Zusätzliches mit uns vereinbart, gibt es kein automatisches Abo. Die Demo-Webseite ist kostenlos und unverbindlich. Bei einem Projekt ab 99 € sind die einmaligen Leistungen im Angebot beschrieben – ohne versteckte Folgekosten.",
+    a: "Nein. Solange ihr nichts Zusätzliches mit uns vereinbart, gibt es kein automatisches Abo. Die Website-Vorschau ist kostenlos und unverbindlich. Bei einem Projekt ab 99 € sind die einmaligen Leistungen im Angebot beschrieben – ohne versteckte Folgekosten.",
   },
   {
     q: "Wie läuft es, wenn wir eine individuelle Webseite wollen?",
     a: "Wir klären mit euch Design, Funktionen und Hosting und machen ein schriftliches Angebot. Los geht’s bei ab 99 € einmalig, der Endpreis richtet sich nach dem Umfang. Technische Einrichtung und Schaltung besprechen wir vorher – ihr müsst keine Menüs selbst durchklicken.",
   },
   {
-    q: "Was ist bei der kostenlosen Demo-Webseite dabei?",
-    a: "Ihr bekommt eine vollständige Demo im WebDudes-Stil: kostenlos, unverbindlich, mit Dateien zum Download für eure Unterlagen. Perfekt, um uns kennenzulernen. Ob ihr danach ein Projekt startet, entscheidet ihr ohne Druck.",
+    q: "Was ist bei der kostenlosen Website-Vorschau dabei?",
+    a: "Ihr bekommt eine vollständige Vorschau im WebDudes-Stil: kostenlos, unverbindlich, im kurzen Google Meet gezeigt. Perfekt, um uns kennenzulernen. Ob ihr danach ein Projekt startet, entscheidet ihr ohne Druck.",
   },
   {
     q: "Später größerer Umbau – geht das?",
@@ -24,7 +24,7 @@ const FAQ = [
   },
   {
     q: "Wie schnell sehen wir was?",
-    a: "Im Termin seht ihr die fertige Demo bzw. den aktuellen Stand eures Projekts – nicht nur eine leere Präsentation. Wie lange der Weg dorthin ist, sagen wir vorher.",
+    a: "Im Termin seht ihr die fertige Vorschau bzw. den aktuellen Stand eures Projekts – nicht nur eine leere Präsentation. Wie lange der Weg dorthin ist, sagen wir vorher.",
   },
   {
     q: "Was passiert im Calendly-Termin?",

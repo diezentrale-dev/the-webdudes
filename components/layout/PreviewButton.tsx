@@ -45,8 +45,8 @@ export function PreviewButton() {
             style={{ pointerEvents: "none" }}
           >
             <p className="px-3 py-2 text-[11px] leading-snug text-[var(--text-muted)]">
-              <span className="font-semibold text-[var(--text-primary)]">{SITE.name}</span> · Demo aus dem
-              Portfolio – so kann’s aussehen, wenn die Webseite steht.
+              <span className="font-semibold text-[var(--text-primary)]">{SITE.name}</span> · Vorschau aus dem
+              Portfolio — so kann es aussehen, wenn die Webseite steht.
             </p>
             <div className="relative h-24 w-full overflow-hidden border-t border-white/8 bg-[var(--bg-deep)]">
               <iframe
@@ -61,8 +61,8 @@ export function PreviewButton() {
 
           <RippleButton variant="secondary" className="!px-3 !py-2.5 sm:!px-4 sm:!py-3" onClick={() => setOpen(true)}>
             <Sparkles className="h-4 w-4 text-accent-warm" aria-hidden />
-            <span className="hidden sm:inline">Beispiel ansehen</span>
-            <span className="sm:hidden">Demo</span>
+            <span className="hidden sm:inline">Vorschau ansehen</span>
+            <span className="sm:hidden">Vorschau</span>
           </RippleButton>
         </div>
       </div>
