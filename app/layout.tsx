@@ -42,10 +42,9 @@ export const metadata: Metadata = {
     title: `${SITE.name} · ${SITE.metaTitle}`,
     description: SITE.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: process.env.NEXT_PUBLIC_SITE_PASSWORD?.trim()
+    ? { index: false, follow: false }
+    : { index: true, follow: true },
 };
 
 export default function RootLayout({
